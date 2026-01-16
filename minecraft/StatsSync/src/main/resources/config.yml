@@ -1,0 +1,16 @@
+planExtensions:
+  enabled: true
+  intervalMinutes: 15
+  initialDelaySeconds: 180
+
+playerStats:
+  enabled: true
+  intervalMinutes: 15
+  initialDelaySeconds: 210
+  exportPath: /data/player-stats/data.json
+  planApiUrl: "http://127.0.0.1:8804/v1/playersTable?server=Server%201"
+
+webstats:
+  enabled: true
+  intervalMinutes: 15
+  initialDelaySeconds: 240
