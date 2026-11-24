@@ -1,16 +1,39 @@
-planExtensions:
-  enabled: true
-  intervalMinutes: 15
-  initialDelaySeconds: 180
+planDb:
+  host: localhost
+  port: 3306
+  database: plan
+  user: plan
+  password: ""
+  options: ""
 
-playerStats:
-  enabled: true
-  intervalMinutes: 15
-  initialDelaySeconds: 210
-  exportPath: /data/player-stats/data.json
-  planApiUrl: "http://127.0.0.1:8804/v1/playersTable?server=Server%201"
+paths:
+  planLibraries: plugins/Plan/libraries
+  whitelist: whitelist.json
+  stats: world/players/stats
+  advancements: world/players/advancements
+  essentials: plugins/Essentials/userdata
+  serverProperties: server.properties
+  playerStats: plugins/StatsSync/player-stats.json
+  serverInfo: plugins/StatsSync/server-info.json
 
 webstats:
-  enabled: true
+  enabled: false
   intervalMinutes: 15
-  initialDelaySeconds: 240
+  initialDelaySeconds: 60
+
+playerStats:
+  enabled: false
+  intervalMinutes: 15
+  initialDelaySeconds: 60
+
+planExtensions:
+  enabled: false
+  intervalMinutes: 15
+  initialDelaySeconds: 60
+
+serverInfo:
+  enabled: false
+  intervalMinutes: 15
+  initialDelaySeconds: 60
+  ipOverride: ""
+  portOverride: ""

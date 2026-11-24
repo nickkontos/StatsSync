@@ -1,15 +1,14 @@
 name: StatsSync
 main: com.homeofcappuccino.stats.StatsSyncPlugin
-version: 1.0.0
-api-version: "1.20"
-softdepend:
-  - Plan
-  - WebStats
+version: 9.2.1
+description: "Syncs whitelisted player stats into Plan extensions, WebStats, and server-info JSON exports."
+authors: ["Nicolas Kondós"]
+api-version: "1.21"
 commands:
   statssync:
-    description: Manage StatsSync tasks
-    usage: /statssync reload | /statssync run <webstats|playerstats|planextensions>
+    description: "Syncs whitelisted player stats into Plan extensions, WebStats, and server-info JSON exports."
     permission: statssync.admin
+    usage: /statssync reload | /statssync run <webstats|playerstats|planextensions|serverinfo>
 permissions:
   statssync.admin:
     default: op
